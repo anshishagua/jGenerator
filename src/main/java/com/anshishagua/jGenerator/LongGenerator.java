@@ -22,8 +22,16 @@ public class LongGenerator implements Generator<Long> {
 
     @Override
     public Long generate() {
+        long diff = max - min;
+
         Random random = new Random();
 
-        return random.nextLong();
+        long result = random.nextLong() % diff;
+
+        if (result < 0) {
+            result += diff;
+        }
+
+        return result;
     }
 }

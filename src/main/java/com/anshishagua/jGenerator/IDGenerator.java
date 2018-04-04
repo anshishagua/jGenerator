@@ -11,12 +11,16 @@ import java.util.concurrent.atomic.AtomicLong;
 public class IDGenerator implements Generator<Long> {
     private AtomicLong atomicLong;
 
+    public IDGenerator() {
+        atomicLong = new AtomicLong(0);
+    }
+
     public IDGenerator(long start) {
         atomicLong = new AtomicLong(start);
     }
 
     @Override
     public Long generate() {
-        return atomicLong.incrementAndGet();
+        return atomicLong.getAndIncrement();
     }
 }

@@ -6,5 +6,13 @@ package com.anshishagua.jGenerator;
  * Time: 上午10:01
  */
 
-public class AgeGenerator {
+public class AgeGenerator extends IntGenerator {
+    public AgeGenerator(int min, int max) {
+        super(min, max);
+    }
+
+    @Override
+    public Integer generate() {
+        return super.generate();
+    }
 }
