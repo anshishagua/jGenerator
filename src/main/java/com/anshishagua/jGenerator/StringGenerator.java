@@ -1,5 +1,7 @@
 package com.anshishagua.jGenerator;
 
+import com.anshishagua.jGenerator.primitive.IntGenerator;
+
 import java.util.Random;
 
 /**

@@ -1,4 +1,6 @@
-package com.anshishagua.jGenerator;
+package com.anshishagua.jGenerator.primitive;
+
+import com.anshishagua.jGenerator.AbstractGenerator;
 
 import java.util.Random;
 
@@ -8,21 +10,21 @@ import java.util.Random;
  * Time: 下午10:04
  */
 
-public class LongGenerator implements Generator<Long> {
+public class LongGenerator extends AbstractGenerator<Long> {
     public static final long MIN = Long.MIN_VALUE;
     public static final long MAX = Long.MAX_VALUE;
 
-    private long min;
-    private long max;
+    public LongGenerator() {
+        super(MIN, MAX);
+    }
 
     public LongGenerator(long min, long max) {
-        this.min = min;
-        this.max = max;
+        super(min, max);
     }
 
     @Override
     public Long generate() {
-        long diff = max - min;
+        long diff = getUpperBound() - getLowerBound();
 
         Random random = new Random();
 

@@ -1,4 +1,6 @@
-package com.anshishagua.jGenerator;
+package com.anshishagua.jGenerator.enumeration;
+
+import com.anshishagua.jGenerator.Generator;
 
 import java.lang.reflect.Method;
 import java.util.Random;

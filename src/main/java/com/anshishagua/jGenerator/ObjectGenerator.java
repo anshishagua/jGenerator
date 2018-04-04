@@ -3,6 +3,8 @@ package com.anshishagua.jGenerator;
 import com.anshishagua.jGenerator.annotations.EnumConstraint;
 import com.anshishagua.jGenerator.annotations.IntConstraint;
 import com.anshishagua.jGenerator.annotations.StringConstraint;
+import com.anshishagua.jGenerator.enumeration.EnumGenerator;
+import com.anshishagua.jGenerator.primitive.IntGenerator;
 
 import java.lang.reflect.Field;
 
@@ -37,7 +39,7 @@ public class ObjectGenerator <T> implements Generator<T> {
                     Class<?> type = field.getType();
 
                     if (!type.isEnum()) {
-                        throw new RuntimeException(type + " is not enum");
+                        throw new RuntimeException(type + " is not enumeration");
                     }
 
                     EnumGenerator generator = new EnumGenerator(field.getType());

@@ -1,4 +1,6 @@
-package com.anshishagua.jGenerator;
+package com.anshishagua.jGenerator.primitive;
+
+import com.anshishagua.jGenerator.AbstractGenerator;
 
 import java.util.Random;
 
