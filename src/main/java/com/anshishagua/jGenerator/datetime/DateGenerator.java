@@ -17,6 +17,10 @@ import java.util.Random;
 public class DateGenerator extends AbstractGenerator<ChronoLocalDate> {
     public static final DateTimeFormatter DATE_FORMATTER = DateTimeFormatter.ofPattern("yyyy-MM-dd");
 
+    public DateGenerator() {
+        super(LocalDate.MIN, LocalDate.MAX);
+    }
+
     public DateGenerator(LocalDate min, LocalDate max) {
         super(min, max);
     }

@@ -11,6 +11,10 @@ import java.util.Random;
  */
 
 public class DoubleGenerator extends AbstractGenerator<Double> {
+    public DoubleGenerator() {
+        super(Double.MIN_VALUE, Double.MAX_VALUE);
+    }
+
     public DoubleGenerator(double lower, double upper) {
         super(lower, upper);
     }

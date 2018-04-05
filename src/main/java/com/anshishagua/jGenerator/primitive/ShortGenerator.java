@@ -11,6 +11,10 @@ import java.util.Random;
  */
 
 public class ShortGenerator extends AbstractGenerator<Short> {
+    public ShortGenerator() {
+        super(Short.MIN_VALUE, Short.MAX_VALUE);
+    }
+
     public ShortGenerator(short min, short max) {
         super(min, max);
     }

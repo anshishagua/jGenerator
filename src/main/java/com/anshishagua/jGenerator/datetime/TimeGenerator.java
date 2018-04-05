@@ -18,6 +18,10 @@ import java.util.Random;
 public class TimeGenerator extends AbstractGenerator<LocalTime> {
     public static final DateTimeFormatter TIME_FORMATTER = DateTimeFormatter.ofPattern("HH:mm:ss");
 
+    public TimeGenerator() {
+        super(LocalTime.MIN, LocalTime.MAX);
+    }
+
     public TimeGenerator(String minString, String maxString) {
         super(LocalTime.parse(minString, TIME_FORMATTER), LocalTime.parse(maxString, TIME_FORMATTER));
     }

@@ -9,16 +9,13 @@ import java.lang.annotation.Target;
 
 /**
  * User: lixiao
- * Date: 2018/4/2
- * Time: 下午11:43
+ * Date: 2018/4/5
+ * Time: 下午5:52
  */
 
 @Documented
 @Target(ElementType.FIELD)
 @Retention(RetentionPolicy.RUNTIME)
 @Inherited
-public @interface StringConstraint {
-    int minLength() default 1;
-    int maxLength() default Integer.MAX_VALUE;
-    boolean nullable() default false;
+public @interface ObjectGenerate {
 }

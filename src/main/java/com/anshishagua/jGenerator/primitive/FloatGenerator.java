@@ -11,6 +11,10 @@ import java.util.Random;
  */
 
 public class FloatGenerator extends AbstractGenerator<Float> {
+    public FloatGenerator() {
+        super(Float.MIN_VALUE, Float.MAX_VALUE);
+    }
+
     public FloatGenerator(float lower, float upper) {
         super(lower, upper);
     }

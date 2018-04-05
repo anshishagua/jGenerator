@@ -9,15 +9,14 @@ import java.lang.annotation.Target;
 
 /**
  * User: lixiao
- * Date: 2018/4/2
- * Time: 下午11:42
+ * Date: 2018/4/3
+ * Time: 下午11:45
  */
 
 @Documented
 @Target(ElementType.FIELD)
 @Retention(RetentionPolicy.RUNTIME)
 @Inherited
-public @interface IntConstraint {
-    int min() default Integer.MIN_VALUE;
-    int max() default Integer.MAX_VALUE;
+public @interface EnumGenerate {
+
 }
