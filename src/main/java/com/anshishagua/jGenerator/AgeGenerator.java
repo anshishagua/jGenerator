@@ -1,5 +1,7 @@
 package com.anshishagua.jGenerator;
 
+import com.anshishagua.jGenerator.primitive.IntGenerator;
+
 /**
  * User: lixiao
  * Date: 2018/3/29

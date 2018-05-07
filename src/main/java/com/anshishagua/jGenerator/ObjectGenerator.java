@@ -3,6 +3,7 @@ package com.anshishagua.jGenerator;
 import com.anshishagua.jGenerator.annotations.BooleanGenerate;
 import com.anshishagua.jGenerator.annotations.ByteGenerate;
 import com.anshishagua.jGenerator.annotations.CharGenerate;
+import com.anshishagua.jGenerator.annotations.ChineseNameGenerate;
 import com.anshishagua.jGenerator.annotations.DoubleGenerate;
 import com.anshishagua.jGenerator.annotations.EnumGenerate;
 import com.anshishagua.jGenerator.annotations.FloatGenerate;
@@ -235,11 +236,14 @@ public class ObjectGenerator <T> implements Generator<T> {
                     value = generator.generate();
                 }
                 else if (type == String.class) {
-                    if (!field.isAnnotationPresent(StringGenerate.class) && !genAllFields) {
+                    if (!field.isAnnotationPresent(StringGenerate.class) && !field.isAnnotationPresent(ChineseNameGenerate.class) && !genAllFields) {
                         continue;
                     }
 
-                    if (field.isAnnotationPresent(StringGenerate.class)) {
+                    if (field.isAnnotationPresent(ChineseNameGenerate.class)) {
+                        generator = new ChineseNameGenerator();
+                    }
+                    else if (field.isAnnotationPresent(StringGenerate.class)) {
                         StringGenerate constraint = field.getAnnotation(StringGenerate.class);
 
                         generator = new StringGenerator(constraint.minLength(), constraint.maxLength(), constraint.nullable());
